@@ -36,3 +36,5 @@ As you can see, the entire business logic is missing and the data is only displa
 Tests are missing too, not for not wanting them but for time constraints as well.
 
 In this exercise, 90% of the time I spent on research and making the project itself work with Nest + prisma + trpc + react (Next was excluded due to time constraints too).
+
+Most of the time not used in research was used to make sure tRPC worked between back-end and front-end, which I'm not sure was the best idea to use, but the results are decent and I like the extra layer of type strictness.

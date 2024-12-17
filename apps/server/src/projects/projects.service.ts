@@ -7,6 +7,11 @@ export class ProjectsService {
   constructor(private readonly databaseService: DatabaseService) {}
 
   findAll() {
-    return this.databaseService.project.findMany();
+    return this.databaseService.project.findMany({
+      include: {
+        country: true,
+        supplier: true,
+      },
+    });
   }
 }

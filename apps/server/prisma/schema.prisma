@@ -16,6 +16,7 @@ datasource db {
 model Country {
   id       Int       @id
   name     String
+  code     String
   projects Project[]
 }
 

@@ -10,6 +10,7 @@ async function main() {
     create: {
       id: 1,
       name: 'Germany',
+      code: 'DE',
     },
   });
   const countryIndia = await prisma.country.upsert({
@@ -18,6 +19,7 @@ async function main() {
     create: {
       id: 2,
       name: 'India',
+      code: 'IN',
     },
   });
   const countryBrazil = await prisma.country.upsert({
@@ -26,6 +28,7 @@ async function main() {
     create: {
       id: 3,
       name: 'Brazil',
+      code: 'BR',
     },
   });
   const countryEgipt = await prisma.country.upsert({
@@ -34,6 +37,7 @@ async function main() {
     create: {
       id: 4,
       name: 'Egipt',
+      code: 'EG',
     },
   });
   console.log({ countryGermany, countryIndia, countryBrazil, countryEgipt });

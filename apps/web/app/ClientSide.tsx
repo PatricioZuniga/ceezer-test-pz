@@ -1,14 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { trpc } from "./trpc";
+import { trpc } from "./utils/trpc";
 
 export default function ClientSide() {
-  const [greeting, setGreeting] = useState("");
+  const projects = trpc.projects.useQuery();
 
-  useEffect(() => {
-    trpc.hello.query({ name: 'Pato'}).then((response: string) => setGreeting(response));
-  });
-
-  return <div>Client Side - {greeting}</div>;
+  return (
+    <div>
+      {projects.data?.map((project) => (
+        <div key={project.id}>{JSON.stringify(project)}</div>
+      ))}
+    </div>
+  );
 }

@@ -31,9 +31,9 @@ model Project {
   country                Country  @relation(fields: [country_id], references: [id])
   country_id             Int
   image                  String
-  price_per_ton          Decimal
+  price_per_ton          Decimal @db.Decimal(9,2)
   offered_volume_in_tons Int
-  distribution_weight    Decimal
+  distribution_weight    Decimal @db.Decimal(9,2)
   supplier               Supplier @relation(fields: [supplier_id], references: [id])
   supplier_id            Int
   earliest_delivery      DateTime
